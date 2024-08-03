@@ -1,0 +1,51 @@
+#root {
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.main-content {
+  padding: 0 2em;
+  padding-bottom: 400px;
+  border-left: 1px solid hsl(0, 0%, 83%, 0.5);
+  border-right: 1px solid hsl(0, 0%, 83%, 0.5);
+  width: min(800px, 100%);
+}
+
+.loading-screen {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin-top: 1em;
+  gap: 1em;
+}
+
+.items-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
+  padding: 2em 0;
+}
+
+.rarity-section {
+  text-align: left;
+}
+
+@media (max-width: 1000px) {
+  .page-container {
+    justify-content: flex-start;
+  }
+
+  .selected-item {
+    display: none;
+  }
+}

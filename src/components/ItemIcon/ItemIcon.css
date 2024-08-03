@@ -1,0 +1,63 @@
+.item-icon {
+  position: relative;
+  width: 65px;
+
+  &:hover > div {
+    display: block;
+  }
+
+  & > img {
+    width: 100%;
+    padding: 2px;
+    cursor: pointer;
+    border: 1px solid gray;
+  }
+}
+
+.Crimson {
+  position: absolute;
+  bottom: 7px;
+  left: 25%;
+  width: 50%;
+  border-bottom: 4px solid hsl(348, 83%, 47%);
+  border-radius: 1em;
+}
+
+.Dawn {
+  position: absolute;
+  bottom: 7px;
+  left: 25%;
+  width: 50%;
+  border-bottom: 4px solid hsl(240, 100%, 50%);
+  border-radius: 1em;
+}
+
+@media (max-width: 800px) {
+  .item-icon:hover > div {
+    display: none;
+  }
+}
+
+.Mythic {
+  background-color: rgb(115, 43, 43);
+}
+
+.Legendary {
+  background-color: rgb(142, 109, 45);
+}
+
+.Epic {
+  background-color: rgb(91, 66, 131);
+}
+
+.Rare {
+  background-color: rgb(42, 62, 98);
+}
+
+.Uncommon {
+  background-color: rgb(65, 88, 64);
+}
+
+.Common {
+  background-color: rgb(83, 85, 84);
+}

@@ -1,0 +1,53 @@
+.item-header {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  text-align: left;
+  grid-template-columns: 1fr 100px;
+
+  img {
+    max-width: 100%;
+    background-color: transparent !important;
+  }
+}
+
+.item-tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75em;
+
+  p {
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: yellow;
+  }
+}
+
+.item-popup {
+  display: none;
+  position: absolute;
+  top: 0;
+
+  z-index: 99;
+  background-color: hsl(0, 0%, 10%);
+  width: 320px;
+  padding: 2em;
+  font-size: 0.8rem;
+  border: 1px solid gray;
+  text-align: left;
+}
+
+.item-passive > * {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.item-passive > h3 {
+  color: yellow;
+}
+
+.item-passive > p {
+  margin-left: 0.5rem;
+}
