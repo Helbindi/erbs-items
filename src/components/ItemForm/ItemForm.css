@@ -1,0 +1,89 @@
+.item-form {
+  position: absolute;
+  top: 0.5em;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border: 1px solid white;
+  padding: 1em 0;
+  width: 750px;
+  margin-left: 1em;
+  height: max-content;
+
+  & > *:not(:last-child) {
+    padding: 1em;
+    border-bottom: 1px solid white;
+  }
+}
+
+.item-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.stat-input {
+  display: flex;
+  gap: 0.5em;
+
+  & > input[type="text"] {
+    text-align: center;
+    width: 5ch;
+  }
+}
+
+.add-stat {
+  cursor: pointer;
+  width: 175px;
+  place-self: center;
+}
+
+.passive-input {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 0.5em;
+
+  & > input[type="text"] {
+    text-align: center;
+    width: 20ch;
+  }
+}
+
+label {
+  font-weight: 700;
+}
+
+.item-components {
+  display: grid;
+  gap: 1em;
+}
+
+.form-btn {
+  background-color: yellowgreen;
+  width: 150px;
+}
+
+.btn-grp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin: 1em;
+}
+
+.item-desc {
+  white-space: pre;
+  max-width: 300px;
+}
+
+.delete {
+  background-color: crimson;
+  color: white;
+}
+
+.close {
+  background-color: gray;
+  color: white;
+}

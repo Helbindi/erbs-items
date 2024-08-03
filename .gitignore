@@ -12,9 +12,6 @@ dist
 dist-ssr
 *.local
 
-src/components/ItemForm/
-src/components/ItemEdit/
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
