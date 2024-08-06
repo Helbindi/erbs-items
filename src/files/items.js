@@ -97,7 +97,6 @@ export const ITEM_STATS = [
   "Armor Penetration",
   "Attack Power",
   "Adaptability",
-  "Attack Power OR",
   "Attack Power Per Level",
   "Attack Range",
   "Attack Speed",

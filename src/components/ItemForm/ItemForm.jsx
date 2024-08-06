@@ -9,7 +9,7 @@ import {
 } from "../../files/items.js";
 import "./ItemForm.css";
 
-const API_URL = "http://localhost:8080/api/items/";
+const API_URL = "https://erbs-items-backend.onrender.com/api/items/";
 
 function ItemForm() {
   const [item, setItem] = useState(ITEM_PLACEHOLDER);
@@ -161,7 +161,12 @@ function ItemForm() {
           + Add New Stat
         </button>
         {item.stats.map((stat, id) => (
-          <InputStat stat={stat} key={id} id={id} setItem={setItem} />
+          <InputStat
+            stat={stat}
+            key={`${stat.name}-${id}`}
+            id={id}
+            setItem={setItem}
+          />
         ))}
       </div>
 

@@ -17,7 +17,7 @@ function ItemPopUp({ item, popUpRef }) {
       </div>
 
       {item.stats.map((stat) => (
-        <div className="item-stat" key={`${stat.name}${stat.value}`}>
+        <div key={`${stat.name}${stat.value}`}>
           <p>
             <strong style={{ color: "limegreen" }}>
               {stat.value}

@@ -6,7 +6,6 @@ import MainFilter from "./components/MainFilter/MainFilter.jsx";
 import TypeFilter from "./components/TypeFilter/TypeFilter.jsx";
 import ItemSelected from "./components/ItemSelected/ItemSelected.jsx";
 import Loading from "./assets/loading.svg";
-import ItemEdit from "./components/ItemEdit/ItemEdit.jsx";
 import ItemForm from "./components/ItemForm/ItemForm.jsx";
 
 const FILTER_DEFAULT = {
@@ -15,7 +14,7 @@ const FILTER_DEFAULT = {
   stats: [],
 };
 
-const API_URL = "https://erbs-items-backend.onrender.com";
+const API_URL = "http://localhost:8080";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -81,7 +80,8 @@ function App() {
         )}
       </main>
 
-      <ItemSelected selected={selected} />
+      <ItemSelected selected={selected} items={items} />
+      {/* <ItemForm /> */}
     </div>
   );
 }

@@ -1,15 +1,117 @@
 .selected-item {
-  min-width: 300px;
-  padding: 1em 2em;
+  width: 20%;
+  padding: 1em;
   height: 100svh;
-  border: 1px solid pink;
+  border: solid 1px pink;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+}
 
-  img {
-    width: 100px;
-    border: 1px solid lightslategray;
+.tree-container {
+  place-self: center;
+}
+
+.selected-desc {
+  font-size: 0.9rem;
+
+  & > h2 {
+    text-align: center;
   }
+}
+
+/* Components Tree */
+.tree {
+  margin: 0 0 1em;
+  text-align: center;
+}
+
+.tree,
+.tree ul,
+.tree li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.tree,
+.tree ul {
+  display: table;
+}
+
+.tree div {
+  display: flex;
+  height: 32px;
+}
+
+.tree img {
+  border: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.tree li {
+  display: table-cell;
+  padding: 1em 0;
+  vertical-align: top;
+
+  /* Horizontal line below each connected node */
+  &::before {
+    outline: solid 1px #666;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0.2em;
+  }
+
+  /* Remove excess length of the line*/
+  &:first-child::before {
+    left: 50%;
+  }
+  &:last-child::before {
+    right: 50%;
+  }
+}
+
+/* Remove vertical line at the top of root node */
+.tree > li:before,
+.tree > li:after,
+.tree > li > div:before {
+  outline: none;
+}
+
+/* Border box around each node */
+.tree div {
+  border: solid 0.1em #666;
+  border-radius: 0.2em;
+  display: inline-block;
+  margin: 0 0.2em 0.5em;
+  position: relative;
+}
+
+/* Vertical Line at the bottom of each parent node */
+.tree ul:before,
+.tree div:before {
+  outline: solid 1px #666;
+  content: "";
+  height: 0.7em;
+  left: 50%;
+  position: absolute;
+}
+
+/* Reposition vertical line at the top of child node */
+.tree div::before {
+  top: -0.8em;
+}
+
+/* Reposition vertical line below each parent node */
+.tree ul:before {
+  top: -0.5em;
 }

@@ -230,7 +230,12 @@ function EditForm({ selected, setSelected, setItems, setLoading }) {
           + Add New Stat
         </button>
         {edited.stats.map((stat, id) => (
-          <InputStat stat={stat} key={stat.name} id={id} setItem={setEdited} />
+          <InputStat
+            stat={stat}
+            key={`${stat.name}-${id}`}
+            id={id}
+            setItem={setEdited}
+          />
         ))}
       </div>
 
