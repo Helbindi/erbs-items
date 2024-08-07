@@ -1,13 +1,31 @@
 import React, { useState, useEffect } from "react";
 import "./ItemSelected.css";
 import { findItemName } from "../../files/helper";
-import ItemIcon from "../ItemIcon/ItemIcon";
 
-function ItemSelected({ selected, items }) {
+function ItemSelected({ selected, setSelected, items }) {
   return (
-    <section className="selected-item">
+    <section className="selected-item" aria-hidden={!selected}>
+      {selected && (
+        <div className="selected-close" onClick={() => setSelected(null)}>
+          X
+        </div>
+      )}
+
+      <div className="tree-container">
+        {selected && (
+          <ul className="tree">
+            <ItemComponent items={items} name={selected?.name} />
+          </ul>
+        )}
+      </div>
+
       <article className="selected-desc">
         <h2>{selected?.name}</h2>
+        <div className="item-tags">
+          <p>{selected?.rarity}</p>
+          <p>{selected?.type}</p>
+          {selected?.subtype === undefined ? <></> : <p>{selected?.subtype}</p>}
+        </div>
         {selected?.stats.map((stat) => (
           <div key={`${stat.name}${stat.value}`}>
             <p>
@@ -30,28 +48,23 @@ function ItemSelected({ selected, items }) {
           <p>{selected?.passive?.desc}</p>
         </div>
       </article>
-
-      {selected && (
-        <div className="tree-container">
-          {selected && (
-            <ul className="tree">
-              <ItemComponent items={items} name={selected?.name} />
-            </ul>
-          )}
-        </div>
-      )}
     </section>
   );
 }
 
 export default ItemSelected;
 
-function ItemComponent({ items, name, selected, setSelected }) {
+function ItemComponent({ items, name }) {
   const item = findItemName(items, name);
   return (
     <li>
       <div>
-        <img className={item.rarity} src={item?.imageUrl} alt={item?.name} />
+        <img
+          className={item.rarity}
+          src={item?.imageUrl}
+          alt={item?.name}
+          title={item?.name}
+        />
       </div>
       {item?.components.length > 0 && (
         <ul>

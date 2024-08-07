@@ -1,8 +1,7 @@
 .selected-item {
-  width: 20%;
+  width: 400px;
   padding: 1em;
   height: 100svh;
-  border: solid 1px pink;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -12,19 +11,34 @@
   top: 0;
 }
 
-.tree-container {
-  place-self: center;
-}
-
 .selected-desc {
   font-size: 0.9rem;
+  overflow-y: auto;
+  scrollbar-color: white gray;
+  scrollbar-width: thin;
+  width: 40ch;
+}
 
-  & > h2 {
-    text-align: center;
+.selected-close {
+  position: absolute;
+  top: 1em;
+  left: 1.5em;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 49;
+
+  &:hover {
+    scale: 1.25;
+    color: hsla(51, 100%, 50%);
   }
 }
 
 /* Components Tree */
+.tree-container {
+  place-self: center;
+  height: 300px;
+}
+
 .tree {
   margin: 0 0 1em;
   text-align: center;
@@ -46,6 +60,7 @@
 
 .tree div {
   display: flex;
+  width: 54px;
   height: 32px;
 }
 
@@ -53,7 +68,7 @@
   border: none;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: fill;
 }
 
 .tree li {
@@ -114,4 +129,19 @@
 /* Reposition vertical line below each parent node */
 .tree ul:before {
   top: -0.5em;
+}
+
+@media (max-width: 1300px) {
+  .selected-item {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: black;
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+
+    &[aria-hidden="false"] {
+      transform: translateX(0%);
+    }
+  }
 }

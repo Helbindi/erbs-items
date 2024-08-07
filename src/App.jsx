@@ -14,7 +14,7 @@ const FILTER_DEFAULT = {
   stats: [],
 };
 
-const API_URL = "http://localhost:8080";
+const API_URL = "https://erbs-items-backend.onrender.com";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -80,7 +80,11 @@ function App() {
         )}
       </main>
 
-      <ItemSelected selected={selected} items={items} />
+      <ItemSelected
+        selected={selected}
+        setSelected={setSelected}
+        items={items}
+      />
       {/* <ItemForm /> */}
     </div>
   );

@@ -40,12 +40,8 @@ h2 {
   text-align: left;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   .page-container {
     justify-content: flex-start;
-  }
-
-  .selected-item {
-    display: none;
   }
 }
