@@ -1,7 +1,7 @@
 aside[role="main-filter"] {
   display: grid;
   max-width: 250px;
-  height: 90svh;
+  height: 85vh;
 
   position: -webkit-sticky;
   position: sticky;

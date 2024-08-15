@@ -1,6 +1,6 @@
 .item-icon {
   position: relative;
-  width: 65px;
+  width: 60px;
 
   &:hover > div {
     display: block;

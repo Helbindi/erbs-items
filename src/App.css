@@ -44,4 +44,14 @@ h2 {
   .page-container {
     justify-content: flex-start;
   }
+
+  .main-content {
+    border-right: none;
+    padding: 0 1em;
+    font-size: 0.7rem;
+  }
+
+  .items-group {
+    gap: 0.5em;
+  }
 }

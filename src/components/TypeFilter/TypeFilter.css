@@ -3,6 +3,7 @@
   align-items: center;
   justify-items: center;
   padding: 1em;
+  -webkit-tap-highlight-color: transparent;
 
   img {
     width: 32px;
@@ -84,5 +85,11 @@
     p {
       display: none;
     }
+  }
+}
+
+@media (max-width: 425px) {
+  .secondary-filter img {
+    width: 24px;
   }
 }
