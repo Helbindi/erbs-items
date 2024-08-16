@@ -1,6 +1,6 @@
 .selected-item {
   width: min(400px, 82%);
-  padding: 1em;
+  padding: 1em 2em;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,7 +39,6 @@
 /* Components Tree */
 .tree-container {
   place-self: center;
-  height: 300px;
 }
 
 .tree {
@@ -139,7 +138,8 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color: black;
+    background-color: #242424;
+    border-radius: 1em;
     transform: translateX(100%);
     transition: transform 750ms ease-in-out;
     z-index: 99;
@@ -154,5 +154,9 @@
   .tree div {
     width: 40px;
     height: 28px;
+  }
+
+  .selected-item {
+    padding: 1em;
   }
 }
