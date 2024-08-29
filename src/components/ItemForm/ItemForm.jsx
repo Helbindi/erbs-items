@@ -54,10 +54,10 @@ function ItemForm() {
   function resetInputs() {
     nameRef.current.value = "";
     typeRef.current.value = "Weapon";
-    subtypeRef.current.value = "Two-Handed Sword";
+    subtypeRef.current.value = "";
     rarityRef.current.value = "Epic";
     imageRef.current.value = "";
-    passiveNRef.current.value = "None";
+    passiveNRef.current.value = "";
     passiveDRef.current.value = "";
     comp1Ref.current.value = "";
     comp2Ref.current.value = "";
@@ -118,7 +118,7 @@ function ItemForm() {
           ref={subtypeRef}
           name="subtype"
           id="subtype"
-          defaultValue={"Two-Handed Sword"}
+          defaultValue=""
           onChange={(e) => setItem({ ...item, subtype: e.target.value })}
         >
           {ITEM_SUBTYPES.map((subtype) => (
@@ -126,6 +126,7 @@ function ItemForm() {
               {subtype}
             </option>
           ))}
+          <option value="">None</option>
         </select>
       </label>
       <label>
@@ -199,25 +200,17 @@ function ItemForm() {
       <div className="passive-input">
         <h2>Passive</h2>
         <label>Name:</label>
-        <select
+        <input
           ref={passiveNRef}
           name="passive-name"
           id="passive-name"
-          defaultValue={"None"}
           onChange={(e) =>
             setItem({
               ...item,
               passive: { ...item.passive, name: e.target.value },
             })
           }
-        >
-          {ITEM_PASSIVE_NAMES.map((name) => (
-            <option value={name} key={name}>
-              {name}
-            </option>
-          ))}
-          <option value="None"></option>
-        </select>
+        />
 
         <label>Description:</label>
         <textarea

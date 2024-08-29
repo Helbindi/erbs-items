@@ -84,7 +84,6 @@ function App() {
         setSelected={setSelected}
         items={items}
       />
-      {/* <ItemForm /> */}
     </div>
   );
 }

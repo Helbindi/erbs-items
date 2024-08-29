@@ -5,19 +5,22 @@ import { filterByRarity, dynamicFilter } from "../../files/helper.js";
 import { ITEM_TYPES, ITEM_RARITY, ITEM_SUBTYPES } from "../../files/items.js";
 import Loading from "../../assets/loading.svg";
 import "../ItemForm/ItemForm.css";
+import TypeFilter from "../TypeFilter/TypeFilter.jsx";
 
-const API_URL = "http://localhost:8080/api/items/";
+const API_URL = "https://erbs-items-backend.onrender.com/api/items/";
+const FILTER_DEFAULT = {
+  type: "",
+  subtype: "",
+  stats: [],
+};
 
 function ItemEdit() {
   const [items, setItems] = useState([]);
   const [selected, setSelected] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [filterOptions, setFilterOptions] = useState(FILTER_DEFAULT);
 
-  let displayItems = dynamicFilter(items, {
-    type: "",
-    subtype: "",
-    stats: [],
-  });
+  let displayItems = dynamicFilter(items, filterOptions);
   let filterRarity = filterByRarity(displayItems);
 
   useEffect(() => {
@@ -31,6 +34,10 @@ function ItemEdit() {
 
   return (
     <main className="main-content">
+      <TypeFilter
+        filterOptions={filterOptions}
+        setFilterOptions={setFilterOptions}
+      />
       {loading ? (
         <div className="loading-screen">
           Fetching data from server... This may take 50 or more seconds.
