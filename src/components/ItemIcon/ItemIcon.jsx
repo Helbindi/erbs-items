@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import "./ItemIcon.css";
 import ItemPopUp from "../ItemPopUp/ItemPopUp";
 
-const OFFSET = "80px";
+const OFFSET = "66px";
 
 function ItemIcon({ item, selected, setSelected }) {
   const popUpRef = useRef(null);

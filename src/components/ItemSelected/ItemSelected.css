@@ -80,10 +80,10 @@
 
   /* Horizontal line below each connected node */
   &::before {
+    position: absolute;
     outline: solid 1px #666;
     content: "";
     left: 0;
-    position: absolute;
     right: 0;
     top: 0.2em;
   }

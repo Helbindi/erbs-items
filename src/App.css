@@ -31,7 +31,7 @@ h2 {
 .items-group {
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: 0.5em;
   flex-wrap: wrap;
   padding: 2em 0;
 }
@@ -49,9 +49,5 @@ h2 {
     border-right: none;
     padding: 0 1em;
     font-size: 0.7rem;
-  }
-
-  .items-group {
-    gap: 0.5em;
   }
 }
