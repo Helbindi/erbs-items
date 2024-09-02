@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainFilter.css";
-import Wallpaper from "../../assets/Wallpaper.png";
+import Wallpaper from "../../assets/wallpaper/season5.png";
 import { STATS_ICON } from "../../files/items";
 
 const STAT_CATEGORY = [
@@ -18,6 +18,9 @@ const STAT_CATEGORY = [
   "Tenacity",
   "Healing Reduction",
 ];
+
+const PATCH_NOTES =
+  "https://playeternalreturn.com/posts/news?categoryPath=patchnote";
 
 function MainFilter({ filterOptions, setFilterOptions }) {
   function isSelected(stat) {
@@ -43,6 +46,9 @@ function MainFilter({ filterOptions, setFilterOptions }) {
     <aside role="main-filter">
       <div className="img-container">
         <img src={Wallpaper} alt="ER 1st Ani Wallpaper" />
+        <a href={PATCH_NOTES} target="_blank" rel="noopener noreferrer">
+          Patch Notes
+        </a>
       </div>
 
       {STAT_CATEGORY.map((stat) => (

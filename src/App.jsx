@@ -40,7 +40,7 @@ function App() {
       />
 
       <main className="main-content">
-        <h1>Eternal Return Items - Season 4</h1>
+        <h1>Eternal Return Items - Season 5</h1>
         <TypeFilter
           filterOptions={filterOptions}
           setFilterOptions={setFilterOptions}
