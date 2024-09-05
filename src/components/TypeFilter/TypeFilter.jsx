@@ -10,7 +10,7 @@ function TypeFilter({ filterOptions, setFilterOptions }) {
       setFilterOptions({ ...filterOptions, type: "" });
       return;
     }
-    setFilterOptions({ ...filterOptions, type: type });
+    setFilterOptions({ ...filterOptions, type: type, subtype: "" });
   }
 
   function handleSubType(weapon) {
@@ -18,7 +18,7 @@ function TypeFilter({ filterOptions, setFilterOptions }) {
       setFilterOptions({ ...filterOptions, subtype: "" });
       return;
     }
-    setFilterOptions({ ...filterOptions, subtype: weapon.name });
+    setFilterOptions({ ...filterOptions, type: "", subtype: weapon.name });
   }
   return (
     <div className="secondary-filter">

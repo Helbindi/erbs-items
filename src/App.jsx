@@ -6,6 +6,7 @@ import MainFilter from "./components/MainFilter/MainFilter.jsx";
 import TypeFilter from "./components/TypeFilter/TypeFilter.jsx";
 import ItemSelected from "./components/ItemSelected/ItemSelected.jsx";
 import Loading from "./assets/loading.svg";
+import ItemEdit from "./components/ItemEdit/ItemEdit.jsx";
 
 const FILTER_DEFAULT = {
   type: "",
@@ -84,6 +85,8 @@ function App() {
         setSelected={setSelected}
         items={items}
       />
+
+      {/* <ItemEdit /> */}
     </div>
   );
 }

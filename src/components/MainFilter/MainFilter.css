@@ -50,6 +50,7 @@ aside[role="main-filter"] {
     position: absolute;
     bottom: 0;
     left: 0.5em;
+    background-color: hsl(0, 0%, 0%, 40%);
   }
 }
 

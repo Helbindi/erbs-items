@@ -19,8 +19,10 @@ const STAT_CATEGORY = [
   "Healing Reduction",
 ];
 
-const PATCH_NOTES =
-  "https://playeternalreturn.com/posts/news?categoryPath=patchnote";
+const PATCH_NOTES = {
+  version: "1.29.1",
+  url: "https://playeternalreturn.com/posts/news/2161",
+};
 
 function MainFilter({ filterOptions, setFilterOptions }) {
   function isSelected(stat) {
@@ -46,8 +48,8 @@ function MainFilter({ filterOptions, setFilterOptions }) {
     <aside role="main-filter">
       <div className="img-container">
         <img src={Wallpaper} alt="ER 1st Ani Wallpaper" />
-        <a href={PATCH_NOTES} target="_blank" rel="noopener noreferrer">
-          Patch Notes
+        <a href={PATCH_NOTES.url} target="_blank" rel="noopener noreferrer">
+          Patch: {PATCH_NOTES.version}
         </a>
       </div>
 
