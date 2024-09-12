@@ -21,7 +21,7 @@ const STAT_CATEGORY = [
 
 const PATCH_NOTES = {
   version: "1.30",
-  url: "https://playeternalreturn.com/posts/news/2161",
+  url: "https://playeternalreturn.com/posts/news?categoryPath=patchnote",
 };
 
 function MainFilter({ filterOptions, setFilterOptions }) {
