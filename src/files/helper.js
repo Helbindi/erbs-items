@@ -63,27 +63,29 @@ function checkStat(item, verify) {
   // Check for 'Healing Reduction' passive name
   if (verify.includes("Healing Reduction")) {
     if (item.passive.name?.includes("Healing Reduction")) {
-      result.push(true);
+      const arrIdx = verify.findIndex((x) => x === "Healing Reduction");
+      result[arrIdx] = 1;
     }
   }
 
   for (const statObj of item.stats) {
-    for (const x of verify) {
-      if (x === "Life Steal" && statObj.name === "Omnisyphon") {
-        result.push(true);
+    for (const idx in verify) {
+      if (verify[idx] === "Life Steal" && statObj.name === "Omnisyphon") {
+        result[idx] = 1;
       }
 
-      if (x === "Critical Strike" && statObj.name.includes("Critical Strike")) {
-        result.push(true);
-      }
-
-      if (statObj.name === x) {
-        result.push(true);
+      if (statObj.name.includes(verify[idx])) {
+        result[idx] = 1;
       }
     }
   }
 
-  return result.length === verify.length;
+  const sum = result.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+
+  return sum === verify.length;
 }
 
 export function findItemName(items, name) {
