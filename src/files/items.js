@@ -1,7 +1,7 @@
 export const ITEM_PLACEHOLDER = {
   name: "",
   type: "Weapon",
-  subtype: "Two-Handed Sword",
+  subtype: "",
   rarity: "Epic",
   imageUrl: "",
   stats: [],

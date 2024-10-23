@@ -7,6 +7,7 @@ import TypeFilter from "./components/TypeFilter/TypeFilter.jsx";
 import ItemSelected from "./components/ItemSelected/ItemSelected.jsx";
 import Loading from "./assets/loading.svg";
 import ItemEdit from "./components/ItemEdit/ItemEdit.jsx";
+import ItemForm from "./components/ItemForm/ItemForm.jsx";
 
 const FILTER_DEFAULT = {
   type: "",
@@ -86,7 +87,7 @@ function App() {
         items={items}
       />
 
-      {/* <ItemEdit /> */}
+      {/* <ItemForm /> */}
     </div>
   );
 }
