@@ -55,7 +55,7 @@ function ItemForm() {
     nameRef.current.value = "";
     typeRef.current.value = "Weapon";
     subtypeRef.current.value = "";
-    rarityRef.current.value = "Epic";
+    rarityRef.current.value = "Legendary";
     imageRef.current.value = "";
     passiveNRef.current.value = "";
     passiveDRef.current.value = "";
@@ -135,7 +135,7 @@ function ItemForm() {
           ref={rarityRef}
           name="rarity"
           id="rarity"
-          defaultValue={"Epic"}
+          defaultValue={"Legendary"}
           onChange={(e) => setItem({ ...item, rarity: e.target.value })}
         >
           {ITEM_RARITY.map((rarity) => (
