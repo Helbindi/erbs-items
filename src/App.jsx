@@ -42,7 +42,7 @@ function App() {
       />
 
       <main className="main-content">
-        <h1>Eternal Return Items - Season 5</h1>
+        <h1>Eternal Return Items - Season 6</h1>
         <TypeFilter
           filterOptions={filterOptions}
           setFilterOptions={setFilterOptions}
@@ -50,7 +50,8 @@ function App() {
 
         {loading ? (
           <div className="loading-screen">
-            Fetching data from server... This may take 50 or more seconds.
+            Fetching data from server... This may take 50 or more seconds if the
+            server had been previously inactive.
             <img
               className="loading-wheel"
               src={Loading}
@@ -87,7 +88,7 @@ function App() {
         items={items}
       />
 
-      {/* <ItemEdit /> */}
+      {/* <ItemForm /> */}
     </div>
   );
 }

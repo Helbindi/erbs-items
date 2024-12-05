@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainFilter.css";
-import Wallpaper from "../../assets/wallpaper/season5.png";
+import Wallpaper from "../../assets/wallpaper/season6.png";
 import { STATS_ICON } from "../../files/items";
 
 const STAT_CATEGORY = [
@@ -20,7 +20,7 @@ const STAT_CATEGORY = [
 ];
 
 const PATCH_NOTES = {
-  version: "1.34",
+  version: "1.36",
   url: "https://playeternalreturn.com/posts/news?categoryPath=patchnote",
 };
 
@@ -47,7 +47,7 @@ function MainFilter({ filterOptions, setFilterOptions }) {
   return (
     <aside role="main-filter">
       <div className="img-container">
-        <img src={Wallpaper} alt="ER 1st Ani Wallpaper" />
+        <img src={Wallpaper} alt="ER Season Wallpaper" />
         <a href={PATCH_NOTES.url} target="_blank" rel="noopener noreferrer">
           Patch: {PATCH_NOTES.version}
         </a>

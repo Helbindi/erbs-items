@@ -118,9 +118,9 @@ export const ITEM_STATS = [
   "Skill Amplification",
   "Skill Amplification Per Level",
   "Skill Damage Reduction",
+  "Slow Resistance",
   "Tenacity",
   "Vision Range",
-  "",
 ];
 
 export const WEAPON_GROUP = [
