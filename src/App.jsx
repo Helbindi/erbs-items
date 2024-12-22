@@ -36,7 +36,8 @@ function App() {
   }, []);
   return (
     <div className="page-container">
-      <MainFilter
+      <ItemEdit />
+      {/* <MainFilter
         filterOptions={filterOptions}
         setFilterOptions={setFilterOptions}
       />
@@ -86,9 +87,7 @@ function App() {
         selected={selected}
         setSelected={setSelected}
         items={items}
-      />
-
-      {/* <ItemForm /> */}
+      /> */}
     </div>
   );
 }
