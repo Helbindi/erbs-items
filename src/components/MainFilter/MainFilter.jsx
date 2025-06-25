@@ -20,7 +20,7 @@ const STAT_CATEGORY = [
 ];
 
 const PATCH_NOTES = {
-  version: "1.49",
+  version: "1.50",
   url: "https://playeternalreturn.com/posts/news?categoryPath=patchnote",
 };
 
