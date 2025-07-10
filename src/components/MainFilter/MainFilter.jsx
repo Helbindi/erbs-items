@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainFilter.css";
-import Wallpaper from "../../assets/wallpaper/season8.png";
+import Wallpaper from "../../assets/wallpaper/season8.jpg";
 import { STATS_ICON } from "../../files/items";
 
 const STAT_CATEGORY = [
