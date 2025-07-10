@@ -102,7 +102,6 @@ export const ITEM_STATS = [
   "Attack Speed",
   "Basic Attack Amplification per Level",
   "Cooldown Reduction",
-  "Cooldown Reduction Cap",
   "Critical Strike Chance",
   "Critical Strike Damage",
   "Defense",
@@ -120,6 +119,8 @@ export const ITEM_STATS = [
   "Skill Damage Reduction",
   "Slow Resistance",
   "Tenacity",
+  "Tactical Skills Cooldown Reduction",
+  "Ultimate Skill Cooldown Reduction",
   "Vision Range",
 ];
 

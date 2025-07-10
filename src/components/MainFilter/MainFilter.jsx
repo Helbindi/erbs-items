@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainFilter.css";
-import Wallpaper from "../../assets/wallpaper/season7.png";
+import Wallpaper from "../../assets/wallpaper/season8.png";
 import { STATS_ICON } from "../../files/items";
 
 const STAT_CATEGORY = [
@@ -20,7 +20,7 @@ const STAT_CATEGORY = [
 ];
 
 const PATCH_NOTES = {
-  version: "1.50",
+  version: "8.0.0",
   url: "https://playeternalreturn.com/posts/news?categoryPath=patchnote",
 };
 
